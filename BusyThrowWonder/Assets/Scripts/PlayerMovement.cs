@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement Instance {get; private set;}
 
+    public Animator animator;
+
     public GameObject PlayerCamera;
 
     public GameObject rockPrefab;
@@ -44,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Start()
     {
+        animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -57,15 +60,21 @@ public class PlayerMovement : MonoBehaviour
         camXRot += xAxis * camMoveSpeedY;
         PlayerCamera.transform.localRotation = Quaternion.Euler(-camYRot, 0, 0);
         transform.localRotation = Quaternion.Euler(0, camXRot, 0);
+        int oldState = animator.GetInteger("State");
+        int newState = 0;
         int throttle = 0;
         int strafe = 0;
+        bool idleFlag1 = false;
+        bool idleFlag2 = false;
         if (Input.GetKey(KeyCode.Space)) {
             shootCharge = Math.Min(shootCharge + chargeRate * Time.deltaTime, maxCharge);
         }
         if (Input.GetKey(KeyCode.W)) {
             throttle = 1;
+            newState = 1;
         } else if(Input.GetKey(KeyCode.S)) {
             throttle = -1;
+            newState = 2;
         }
 
         if (Input.GetKey(KeyCode.A)) {
@@ -75,7 +84,17 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && shootCharge > 0) {
+            newState = 5;
             shoot();
+        }
+        if (newState != oldState) {
+            animator.SetInteger("State", newState);
+            animator.SetBool("SwitchState", true);
+        } else  if (idleFlag1 && idleFlag2) {
+            animator.SetInteger("State", 0);
+            animator.SetBool("SwitchState", true);
+        } else {
+            animator.SetBool("SwitchState", false);
         }
         Vector3 moveInfo = (transform.forward * throttle * moveSpeed) + (transform.right * strafe * moveSpeed);
         body.linearVelocity = new Vector3(moveInfo.x, body.linearVelocity.y, moveInfo.z);
