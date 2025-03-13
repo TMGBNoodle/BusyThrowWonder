@@ -44,10 +44,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Start()
     {
-        launchPoint = transform.GetChild(1).gameObject;
         body = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
-        PlayerCamera = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -79,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && shootCharge > 0) {
             shoot();
         }
-        Vector3 moveInfo = (transform.forward * throttle) + (transform.right * strafe);
+        Vector3 moveInfo = (transform.forward * throttle * moveSpeed) + (transform.right * strafe * moveSpeed);
         body.linearVelocity = new Vector3(moveInfo.x, body.linearVelocity.y, moveInfo.z);
     }
 
