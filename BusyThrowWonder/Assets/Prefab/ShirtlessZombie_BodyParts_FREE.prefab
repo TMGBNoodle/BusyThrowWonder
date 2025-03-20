@@ -112,6 +112,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c3b5419ecd7c486409a7ddc16a1b12fb, type: 2}
+    - target: {fileID: 5866666021909216657, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6955178182850740640, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
