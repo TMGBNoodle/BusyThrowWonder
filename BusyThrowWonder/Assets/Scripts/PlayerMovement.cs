@@ -118,10 +118,10 @@ public class PlayerMovement : MonoBehaviour
         newRock.GetComponent<Rigidbody>().linearVelocity = transform.forward * (shootCharge+5);
         shootCharge = 0;
     }
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Zombie") {
-            playerHealth = playerHealth - 10.0f;
-        }
-    }
+    // void OnCollisionEnter(Collision collision)
+    // {
+    //     if(collision.gameObject.tag == "Zombie") {
+    //         playerHealth = playerHealth - 10.0f;
+    //     }
+    // }
 }
