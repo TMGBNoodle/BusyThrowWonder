@@ -4,6 +4,7 @@ public class Zombie : MonoBehaviour
 {
     private Animator animator;
     private bool Alive = true;
+    private float Damage = 10.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
