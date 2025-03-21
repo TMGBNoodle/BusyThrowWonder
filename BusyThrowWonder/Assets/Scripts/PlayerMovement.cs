@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
-        slider = GetComponent<Slider>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -133,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         newRock.transform.position = launchPoint.transform.position;
         newRock.GetComponent<Rigidbody>().linearVelocity = transform.forward * (shootCharge+5);
         shootCharge = 0;
+        slider.value = shootCharge;
     }
     // void OnCollisionEnter(Collision collision)
     // {

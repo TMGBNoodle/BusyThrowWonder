@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FightingZombies.unity
     guid: 0b42d4a68be69ff4582964975db40574
-  - enabled: 1
+  - enabled: 0
     path: Assets/Home Screen.unity
     guid: af589f31e84c140f4acf4944d44097af
+  - enabled: 1
+    path: Assets/Scenes/HomeScreen.unity
+    guid: d8b7e5059a31440e5add9deb1bf67428
+  - enabled: 1
+    path: Assets/Scenes/MapDesign.unity
+    guid: d6ba443071276b7498a7a1a497dcdd62
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

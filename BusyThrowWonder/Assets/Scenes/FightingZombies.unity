@@ -765,6 +765,10 @@ PrefabInstance:
       value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 5959466389473273403, guid: 45ba5550a3e809a4fbcb9111cbffedf9, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 625043183}
+    - target: {fileID: 5959466389473273403, guid: 45ba5550a3e809a4fbcb9111cbffedf9, type: 3}
       propertyPath: rockPrefab
       value: 
       objectReference: {fileID: 78772491}

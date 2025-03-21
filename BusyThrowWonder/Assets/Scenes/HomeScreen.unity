@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188cb60afd06e44dc9d2f5c7a18f7c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameLevel: FightingZombies
+  newGameLevel: MapDesign
 --- !u!4 &136790548
 Transform:
   m_ObjectHideFlags: 0
