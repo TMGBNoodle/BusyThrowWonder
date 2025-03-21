@@ -34,7 +34,9 @@ public class PlayerMovement : MonoBehaviour
     public float camMoveSpeedX = 0.5f;
     
     public float camMoveSpeedY = 0.5f;
-    
+    public int health = 100;
+
+    private bool deathComplete = false;
     void Awake()
     {
         if (Instance == null) {
@@ -54,27 +56,36 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0) {
+            if (!deathComplete) {
+                animator.SetBool("Alive", false);
+                
+                PlayerCamera.transform.position += new Vector3(0, 5, 0);
+                PlayerCamera.transform.LookAt(transform.position);
+                deathComplete = true;
+            }
+        } else {
         xAxis = Input.GetAxis("Mouse X");
         yAxis = Input.GetAxis("Mouse Y");
         camYRot += yAxis * camMoveSpeedX;
         camXRot += xAxis * camMoveSpeedY;
         PlayerCamera.transform.localRotation = Quaternion.Euler(-camYRot, 0, 0);
         transform.localRotation = Quaternion.Euler(0, camXRot, 0);
-        int oldState = animator.GetInteger("State");
-        int newState = 0;
+        //int oldState = animator.GetInteger("State");
+        //int newState = 0;
         int throttle = 0;
         int strafe = 0;
-        bool idleFlag1 = false;
-        bool idleFlag2 = false;
+        // bool idleFlag1 = false;
+        // bool idleFlag2 = false;
         if (Input.GetKey(KeyCode.Space)) {
             shootCharge = Math.Min(shootCharge + chargeRate * Time.deltaTime, maxCharge);
         }
         if (Input.GetKey(KeyCode.W)) {
             throttle = 1;
-            newState = 1;
+            //newState = 1;
         } else if(Input.GetKey(KeyCode.S)) {
             throttle = -1;
-            newState = 2;
+            //newState = 2;
         }
 
         if (Input.GetKey(KeyCode.A)) {
@@ -84,20 +95,21 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && shootCharge > 0) {
-            newState = 5;
+            //newState = 5;
             shoot();
         }
-        if (newState != oldState) {
-            animator.SetInteger("State", newState);
-            animator.SetBool("SwitchState", true);
-        } else  if (idleFlag1 && idleFlag2) {
-            animator.SetInteger("State", 0);
-            animator.SetBool("SwitchState", true);
-        } else {
-            animator.SetBool("SwitchState", false);
-        }
+        // if (newState != oldState) {
+        //     animator.SetInteger("State", newState);
+        //     animator.SetBool("SwitchState", true);
+        // } else  if (idleFlag1 && idleFlag2) {
+        //     animator.SetInteger("State", 0);
+        //     animator.SetBool("SwitchState", true);
+        // } else {
+        //     animator.SetBool("SwitchState", false);
+        // }
         Vector3 moveInfo = (transform.forward * throttle * moveSpeed) + (transform.right * strafe * moveSpeed);
         body.linearVelocity = new Vector3(moveInfo.x, body.linearVelocity.y, moveInfo.z);
+        }
     }
 
     void shoot() {
@@ -106,4 +118,10 @@ public class PlayerMovement : MonoBehaviour
         newRock.GetComponent<Rigidbody>().linearVelocity = transform.forward * (shootCharge+5);
         shootCharge = 0;
     }
+    // void OnCollisionEnter(Collision collision)
+    // {
+    //     if(collision.gameObject.tag == "Zombie") {
+    //         playerHealth = playerHealth - 10.0f;
+    //     }
+    // }
 }

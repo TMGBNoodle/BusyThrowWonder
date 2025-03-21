@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShirtlessZombie_BodyParts_FREE
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 1124696254034530909, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -112,6 +116,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c3b5419ecd7c486409a7ddc16a1b12fb, type: 2}
+    - target: {fileID: 5866666021909216657, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6955178182850740640, guid: e88b81dbbde6e97419fd1f6bdc41d4ca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -201,3 +213,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0205e2b6ef2b644448f6ff7c114a5464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 10
