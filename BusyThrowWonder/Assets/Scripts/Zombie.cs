@@ -8,7 +8,7 @@ public class Zombie : MonoBehaviour
     private float debounce = 2.4f;
 
     private float lastHitTime = 0;
-    public float range = 2;
+    public float range = 1.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
