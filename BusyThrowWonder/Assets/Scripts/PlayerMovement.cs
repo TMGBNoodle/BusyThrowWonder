@@ -3,6 +3,8 @@ using Unity.Mathematics;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -37,6 +39,12 @@ public class PlayerMovement : MonoBehaviour
     public int health = 100;
 
     private bool deathComplete = false;
+
+    public Slider slider;
+
+    
+
+    
     void Awake()
     {
         if (Instance == null) {
@@ -50,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
+        slider = GetComponent<Slider>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -79,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         // bool idleFlag2 = false;
         if (Input.GetKey(KeyCode.Space)) {
             shootCharge = Math.Min(shootCharge + chargeRate * Time.deltaTime, maxCharge);
+            sliderUpdate();
         }
         if (Input.GetKey(KeyCode.W)) {
             throttle = 1;
@@ -111,6 +121,12 @@ public class PlayerMovement : MonoBehaviour
         body.linearVelocity = new Vector3(moveInfo.x, body.linearVelocity.y, moveInfo.z);
         }
     }
+
+    public void sliderUpdate(){
+        slider.value = shootCharge;
+    }
+
+
 
     void shoot() {
         GameObject newRock = Instantiate(rockPrefab);
