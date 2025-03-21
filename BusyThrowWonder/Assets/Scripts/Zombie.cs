@@ -21,7 +21,7 @@ public class Zombie : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Rock") {
-            Destroy(collision.gameObject); 
+            collision.gameObject.GetComponent<RockBehavior>().Die();
             animator.SetBool("Alive", false);
             Invoke("d", 10);
             Alive = false;

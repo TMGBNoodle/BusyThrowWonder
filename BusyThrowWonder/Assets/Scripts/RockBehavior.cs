@@ -18,6 +18,6 @@ public class RockBehavior : MonoBehaviour
     public void Die() {
         GameObject newParticleSys = Instantiate(particlePrefab);
         newParticleSys.transform.position = transform.position;
-        
+        Destroy(gameObject);
     }
 }
