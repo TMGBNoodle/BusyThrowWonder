@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     public float camMoveSpeedX = 0.5f;
     
     public float camMoveSpeedY = 0.5f;
+
+    public float playerHealth = 100.0f;
     
     void Awake()
     {
@@ -105,5 +107,11 @@ public class PlayerMovement : MonoBehaviour
         newRock.transform.position = launchPoint.transform.position;
         newRock.GetComponent<Rigidbody>().linearVelocity = transform.forward * (shootCharge+5);
         shootCharge = 0;
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Zombie") {
+            playerHealth = playerHealth - 10.0f;
+        }
     }
 }
