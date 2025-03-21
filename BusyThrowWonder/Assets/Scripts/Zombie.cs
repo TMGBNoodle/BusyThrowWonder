@@ -3,6 +3,7 @@ using UnityEngine;
 public class Zombie : MonoBehaviour
 {
     private Animator animator;
+    private bool Alive = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,7 +13,9 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(PlayerMovement.Instance.transform);
+        if(Alive) {
+            transform.LookAt(PlayerMovement.Instance.transform);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -20,7 +23,15 @@ public class Zombie : MonoBehaviour
         if(collision.gameObject.tag == "Rock") {
             Destroy(collision.gameObject); 
             animator.SetBool("Alive", false);
-            Invoke(Destroy(gameObject), animator.get)
+            Invoke("d", 10);
+            Alive = false;
+            GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<Rigidbody>().detectCollisions = false;
         }
     }
+    
+    void d() {
+        Destroy(gameObject);
+    }
+
 }
