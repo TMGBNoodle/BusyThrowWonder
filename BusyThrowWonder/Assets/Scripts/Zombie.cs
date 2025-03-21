@@ -23,7 +23,7 @@ public class Zombie : MonoBehaviour
         if(collision.gameObject.tag == "Rock") {
             collision.gameObject.GetComponent<RockBehavior>().Die();
             animator.SetBool("Alive", false);
-            Invoke("d", 10);
+            Invoke("d", 7);
             Alive = false;
             GetComponent<Rigidbody>().useGravity = false;
             GetComponent<Rigidbody>().detectCollisions = false;
