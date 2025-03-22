@@ -15729,6 +15729,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5959466389473273403, guid: 45ba5550a3e809a4fbcb9111cbffedf9, type: 3}
+      propertyPath: nextScene
+      value: Credit Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959466389473273403, guid: 45ba5550a3e809a4fbcb9111cbffedf9, type: 3}
       propertyPath: rockPrefab
       value: 
       objectReference: {fileID: 4869755166339584292, guid: 01047ba00c07bac4791c48fd24185ee2, type: 3}
