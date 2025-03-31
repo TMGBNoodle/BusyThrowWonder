@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Home Screen.unity
     guid: af589f31e84c140f4acf4944d44097af
   - enabled: 1
+    path: Assets/Scenes/Credit Scene.unity
+    guid: cb5803c6f913d496ba532927da49e971
+  - enabled: 1
     path: Assets/Scenes/HomeScreen.unity
     guid: d8b7e5059a31440e5add9deb1bf67428
   - enabled: 1
