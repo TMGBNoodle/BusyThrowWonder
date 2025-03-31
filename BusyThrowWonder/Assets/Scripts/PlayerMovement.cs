@@ -4,6 +4,8 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Slider slider;
 
-    
+    [SerializeField] private string nextScene;
 
     
     void Awake()
@@ -59,18 +61,21 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
+
     // Update is called once per frame
-    void Update()
+    async void Update()
     {
         if (health <= 0) {
             if (!deathComplete) {
                 animator.SetBool("Alive", false);
-                
                 PlayerCamera.transform.position += new Vector3(0, 5, 0);
                 PlayerCamera.transform.LookAt(transform.position);
                 deathComplete = true;
+                await  Task.Delay(4000);
+                SceneManager.LoadScene(nextScene);
             }
         } else {
         xAxis = Input.GetAxis("Mouse X");
