@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 10;
 
     private Rigidbody body;
+
+    public AudioSource audioSourse;
     
     public float xAxis = 0;
     public float yAxis = 0;
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        audioSourse = GetComponent<AudioSource>();
         
     }
 
@@ -86,8 +89,8 @@ public class PlayerMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, camXRot, 0);
         //int oldState = animator.GetInteger("State");
         //int newState = 0;
-        int throttle = 0;
-        int strafe = 0;
+        float throttle = 0;
+        float strafe = 0;
         // bool idleFlag1 = false;
         // bool idleFlag2 = false;
         if (Input.GetKey(KeyCode.Space)) {
@@ -95,19 +98,34 @@ public class PlayerMovement : MonoBehaviour
             sliderUpdate();
         }
         if (Input.GetKey(KeyCode.W)) {
-            throttle = 1;
+            throttle = 0.75f;
+            audioSourse.enabled = true;
             //newState = 1;
         } else if(Input.GetKey(KeyCode.S)) {
-            throttle = -1;
+            throttle = -0.75f;
+            audioSourse.enabled = true;
             //newState = 2;
+        } else if (Input.GetKeyUp(KeyCode.W)){
+            audioSourse.enabled = false;
+        } else if (Input.GetKeyUp(KeyCode.S)){
+            audioSourse.enabled = false;
         }
 
         if (Input.GetKey(KeyCode.A)) {
-            strafe = -1;
+            strafe = -0.75f;
+            audioSourse.enabled = true;
         } else if(Input.GetKey(KeyCode.D)) {
-            strafe = 1;
+            strafe = 0.75f;
+            audioSourse.enabled = true;
+        } else if (Input.GetKey(KeyCode.None)){
+            audioSourse.enabled = false;
+        } else if (Input.GetKeyUp(KeyCode.A)){
+            audioSourse.enabled = false;
+        } else if (Input.GetKeyUp(KeyCode.D)){
+            audioSourse.enabled = false;
         }
 
+         
         if (Input.GetKeyUp(KeyCode.Space) && shootCharge > 0) {
             //newState = 5;
             shoot();

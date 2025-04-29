@@ -1576,8 +1576,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "This game was created by Sam C-T, \nTucker Groves-Benedict, and Logan
     O'Roark \nfor CSCI 370 at Hendrix College\n\nAssets from Adobe Maximo:\nBasic
-    Shooter Pack: https://www.mixamo.com/#/?page=1&query=basic+shooter+pack&type=Motion%2CMotionPack\n\nUnity
-    assets:\nhttps://assetstore.unity.com/packagesh/3d/chainlink-fences-73107\nhttps://assetstore.unity.com/packages/3d/props/industrial/industrial-props-kit-84745\nhttps://assetstore.unity.com/packages/3d/props/industrial/pbr-metal-barrels-pack-221309\nhttps://assetstore.unity.com/packages/2d/textures-materials/roads/asphalt-materials-141036\nhttps://assetstore.unity.com/packages/2d/textures-materials/sky/worldskies-free-skybox-pack-86517\nhttps://assetstore.unity.com/packages/tools/particles-effects/simple-fade-scene-transition-system-81753\nhttps://assetstore.unity.com/packages/3d/characters/humanoids/free-shirtless-zombie-276762\nhttps://assetstore.unity.com/packages/3d/characters/survivalist-character-181470\nhttps://assetstore.unity.com/packages/3d/props/exterior/shipping-container-pbr-unity-6-sample-153468\n"
+    Shooter Pack: https://www.mixamo.com/#/?page=1&query=basic+shooter+pack&type=Motion%2CMotionPack\nUnity
+    assets:\nhttps://assetstore.unity.com/packagesh/3d/chainlink-fences-73107\nhttps://assetstore.unity.com/packages/3d/props/industrial/industrial-props-kit-84745\nhttps://assetstore.unity.com/packages/3d/props/industrial/pbr-metal-barrels-pack-221309\nhttps://assetstore.unity.com/packages/2d/textures-materials/roads/asphalt-materials-141036\nhttps://assetstore.unity.com/packages/2d/textures-materials/sky/worldskies-free-skybox-pack-86517\nhttps://assetstore.unity.com/packages/tools/particles-effects/simple-fade-scene-transition-system-81753\nhttps://assetstore.unity.com/packages/3d/characters/humanoids/free-shirtless-zombie-276762\nhttps://assetstore.unity.com/packages/3d/characters/survivalist-character-181470\nhttps://assetstore.unity.com/packages/3d/props/exterior/shipping-container-pbr-unity-6-sample-153468\nSound
+    Assets:\nhttps://uppbeat.io/sfx/weapon-throw/9434/25272\nhttps://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud\nhttps://opengameart.org/content/zombie-moans-01-by-emopreben"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1604,8 +1605,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
