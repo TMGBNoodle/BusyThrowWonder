@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
                 PlayerCamera.transform.LookAt(transform.position);
                 deathComplete = true;
                 await  Task.Delay(4000);
-                Initiate.Fade("Credit Scene", Color.red, 1.0f);
+                Initiate.Fade("Credit Scene", Color.red, 0.75f);
             }
         } else {
         xAxis = Input.GetAxis("Mouse X");
