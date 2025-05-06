@@ -31,6 +31,15 @@ https://assetstore.unity.com/packages/3d/characters/humanoids/free-shirtless-zom
 https://assetstore.unity.com/packages/3d/characters/survivalist-character-181470
 https://assetstore.unity.com/packages/3d/props/exterior/shipping-container-pbr-unity-6-sample-153468
 
+Sound Assets:
+https://uppbeat.io/sfx/weapon-throw/9434/25272
+https://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud
+https://opengameart.org/content/zombie-moans-01-by-emopreben
+https://opengameart.org/content/action-music-pack
+
+Sprites:
+https://opengameart.org/content/pc-keyboard-mouse-and-touch-input-icons
+
 Tucker was tasked with creating the movement and tracking for the character and zombies, as well as animation. Logan was tasked with the creation
-of the map, spawning of the zombies, and the credit screen. Sam was responsible for the creation of the home screen, navigation between screens,
+of the map, spawning of the zombies, sound design and the credit screen. Sam was responsible for the creation of the home screen, navigation between screens,
 slider for shot power and other GUI effects.
