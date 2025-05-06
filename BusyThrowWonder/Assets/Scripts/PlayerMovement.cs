@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
-
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool deathComplete = false;
 
+    public TextMeshProUGUI healthText;
+
     public Slider slider;
 
     [SerializeField] private string nextScene;
@@ -71,14 +73,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     async void Update()
     {
+        healthText.text = $"HP {health.ToString("F0")}";
         if (health <= 0) {
             if (!deathComplete) {
                 animator.SetBool("Alive", false);
                 PlayerCamera.transform.position += new Vector3(0, 5, 0);
                 PlayerCamera.transform.LookAt(transform.position);
                 deathComplete = true;
-                await  Task.Delay(4000);
-                Initiate.Fade("Credit Scene", Color.red, 1.0f);
+                Initiate.Fade("Credit Scene", Color.red, 0.2f);
             }
         } else {
         xAxis = Input.GetAxis("Mouse X");

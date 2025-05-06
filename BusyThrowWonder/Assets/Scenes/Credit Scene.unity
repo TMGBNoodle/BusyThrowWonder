@@ -556,7 +556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 21.901}
+  m_AnchoredPosition: {x: 0, y: 43}
   m_SizeDelta: {x: 653.3649, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077745173
@@ -581,8 +581,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Zombies have beaten you
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: be3ec58c424560a4cb71078e3ffc391c, type: 2}
+  m_sharedMaterial: {fileID: -3201444480412561269, guid: be3ec58c424560a4cb71078e3ffc391c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1116,8 +1116,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: be3ec58c424560a4cb71078e3ffc391c, type: 2}
+  m_sharedMaterial: {fileID: -3201444480412561269, guid: be3ec58c424560a4cb71078e3ffc391c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1141,8 +1141,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 75
-  m_fontSizeBase: 75
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1551,7 +1551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchoredPosition: {x: 0, y: -26}
   m_SizeDelta: {x: 612.3096, y: 190.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2131358186
@@ -1578,10 +1578,10 @@ MonoBehaviour:
     O'Roark \nfor CSCI 370 at Hendrix College\n\nAssets from Adobe Maximo:\nBasic
     Shooter Pack: https://www.mixamo.com/#/?page=1&query=basic+shooter+pack&type=Motion%2CMotionPack\nUnity
     assets:\nhttps://assetstore.unity.com/packagesh/3d/chainlink-fences-73107\nhttps://assetstore.unity.com/packages/3d/props/industrial/industrial-props-kit-84745\nhttps://assetstore.unity.com/packages/3d/props/industrial/pbr-metal-barrels-pack-221309\nhttps://assetstore.unity.com/packages/2d/textures-materials/roads/asphalt-materials-141036\nhttps://assetstore.unity.com/packages/2d/textures-materials/sky/worldskies-free-skybox-pack-86517\nhttps://assetstore.unity.com/packages/tools/particles-effects/simple-fade-scene-transition-system-81753\nhttps://assetstore.unity.com/packages/3d/characters/humanoids/free-shirtless-zombie-276762\nhttps://assetstore.unity.com/packages/3d/characters/survivalist-character-181470\nhttps://assetstore.unity.com/packages/3d/props/exterior/shipping-container-pbr-unity-6-sample-153468\nSound
-    Assets:\nhttps://uppbeat.io/sfx/weapon-throw/9434/25272\nhttps://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud\nhttps://opengameart.org/content/zombie-moans-01-by-emopreben"
+    Assets:\nhttps://uppbeat.io/sfx/weapon-throw/9434/25272\nhttps://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud\nhttps://opengameart.org/content/zombie-moans-01-by-emopreben\nhttps://opengameart.org/content/action-music-pack\nSprites:\nhttps://opengameart.org/content/pc-keyboard-mouse-and-touch-input-icons"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: be3ec58c424560a4cb71078e3ffc391c, type: 2}
+  m_sharedMaterial: {fileID: -3201444480412561269, guid: be3ec58c424560a4cb71078e3ffc391c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1605,8 +1605,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
