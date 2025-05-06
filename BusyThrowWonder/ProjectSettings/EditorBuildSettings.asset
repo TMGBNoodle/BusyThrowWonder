@@ -8,18 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FightingZombies.unity
     guid: 0b42d4a68be69ff4582964975db40574
-  - enabled: 0
-    path: Assets/Home Screen.unity
-    guid: af589f31e84c140f4acf4944d44097af
-  - enabled: 1
-    path: Assets/Scenes/Credit Scene.unity
-    guid: cb5803c6f913d496ba532927da49e971
   - enabled: 1
     path: Assets/Scenes/HomeScreen.unity
     guid: d8b7e5059a31440e5add9deb1bf67428
+  - enabled: 1
+    path: Assets/Scenes/Credit Scene.unity
+    guid: cb5803c6f913d496ba532927da49e971
   - enabled: 1
     path: Assets/Scenes/MapDesign.unity
     guid: d6ba443071276b7498a7a1a497dcdd62
